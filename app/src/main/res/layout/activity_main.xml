@@ -6,4 +6,20 @@
     android:layout_height="match_parent"
     tools:context="com.example.hemanthc98.homedepothackathon.MainActivity">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="187dp"
+        android:layout_height="97dp"
+        android:text="Lend"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="108dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="187dp"
+        android:layout_height="97dp"
+        android:text="Borrow"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="268dp" />
+
 </android.support.constraint.ConstraintLayout>
