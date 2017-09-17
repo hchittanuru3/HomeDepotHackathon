@@ -1,8 +1,11 @@
 package com.example.hemanthc98.homedepothackathon;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.SparseArray;
@@ -24,6 +27,7 @@ public class BarcodeScanning extends AppCompatActivity {
 
     SurfaceView camera;
     Button button;
+    public static final String ALLOW_KEY = "ALLOWED";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +57,7 @@ public class BarcodeScanning extends AppCompatActivity {
         camera.getHolder().addCallback(new SurfaceHolder.Callback() {
             @Override
             public void surfaceCreated(SurfaceHolder holder) {
-                if (ActivityCompat.checkSelfPermission(BarcodeScanning.this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                if (ContextCompat.checkSelfPermission(BarcodeScanning.this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                     // TODO: Consider calling
                     //    ActivityCompat#requestPermissions
                     // here to request the missing permissions, and then overriding
@@ -61,7 +65,7 @@ public class BarcodeScanning extends AppCompatActivity {
                     //                                          int[] grantResults)
                     // to handle the case where the user grants the permission. See the documentation
                     // for ActivityCompat#requestPermissions for more details.
-                    return;
+                    System.out.println("yo");
                 }
                 try {
                     cameraSource.start(camera.getHolder());
@@ -69,6 +73,7 @@ public class BarcodeScanning extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
+
 
             @Override
             public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {

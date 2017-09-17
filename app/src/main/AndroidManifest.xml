@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ProductsAvailable" />
-        <activity android:name=".BarcodeScanning" />
+        <activity android:name=".BarcodeScanning"
+            android:exported="true"/>
 
         <meta-data
             android:name="com.google.android.gms.vision.DEPENDENCIES"
