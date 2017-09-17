@@ -17,13 +17,22 @@
         android:gravity="center"/>
 
 
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp" />
 
     <Button
         android:id="@+id/scan"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:text="Scan"
         android:layout_gravity="center"
+        android:onClick="scan"
+        android:paddingBottom="10dp"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp"/>
+        android:text="Scan" />
 </LinearLayout>
